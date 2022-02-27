@@ -42,9 +42,7 @@ def remove_pet_by_name(dictionary, name):
 
 
 def add_pet_to_stock(dictionary1, dictionary2):
-    new_dictionary = {}
-    new_dictionary = dictionary1["pets"].append(dictionary2)
-    return new_dictionary
+    return dictionary1["pets"].append(dictionary2)
     
 def get_customer_cash(dictionary):
     return dictionary["cash"]
@@ -64,8 +62,7 @@ def add_pet_to_customer(dictionary_of_customer, dictionary_of_pet):
 def customer_can_afford_pet(dictionary1, dictionary2):
     if dictionary1["cash"] >= dictionary2["price"]:
         return True
-    else:
-        return False
+    return False
 
 def sell_pet_to_customer(dictionary_shop, dictionary_pet, dictionary_customer):
     if dictionary_pet is None:
